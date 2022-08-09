@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Jotform from 'react-jotform';
 
@@ -17,13 +16,9 @@ export default function Home() {
 			<div className={styles.header}>
 
 				<span className={styles.logoDesktop}>
-					{/* <Image src="/logo-desktop.png" alt="OmniPower Logo" width={381} height={66} /> */}
-					{/* <Image src="/logo-desktop.png" alt="OmniPower Logo" width={381} height={66} /> */}
 					<img src="/logo-desktop.png" alt="OmniPower Logo" width={381} height={66}></img>
 				</span	>
 				<span className={styles.logoMobile}>
-					{/* <Image src="/logo-mobile.png" alt="OmniPower Logo" width={260} height={45} /> */}
-					{/* <Image src="/logo-mobile.png" alt="OmniPower Logo" width={260} height={45} /> */}
 					<img src="/logo-mobile.png" alt="OmniPower Logo" width={260} height={45}></img>
 				</span>
 
