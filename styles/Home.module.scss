@@ -5,6 +5,8 @@
 
     .wrapper{
 
+        padding-bottom: 6em;
+
         .header{
             display: flex;
             justify-content: flex-start;
@@ -22,13 +24,13 @@
         .funnel{
             // padding-bottom: 6em;
             iframe{
-                padding-bottom: 0;
+                // padding-bottom: 0;
             }
         }
 
         .calendly{
             .calendlyWidget{
-                padding-bottom: 0;
+                // padding-bottom: 6em;
             }
         }
     }
@@ -78,13 +80,13 @@
 
             .funnel{
                 iframe{
-                    padding-bottom: 6em;
+                    // padding-bottom: 6em;
                 }
             }
 
             .calendly{
                 .calendlyWidget{
-                    padding-bottom: 6em;
+                    // padding-bottom: 6em;
                 }
             }
         }

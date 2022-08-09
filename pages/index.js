@@ -20,6 +20,7 @@ export default function Home() {
 
 	const handleSubmit = () => {
 		setFormSubmitted(true);
+		window.scrollTo(0, 0);
 	};
 
   return (
@@ -55,7 +56,7 @@ export default function Home() {
 				<div 
 					className={`calendly-inline-widget ${styles.calendlyWidget}`} 
 					data-url="https://calendly.com/omnipower/schedule-a-call" 
-					style={{minWidth: "320px", height: "650px"}}>
+					style={{minWidth: "320px", height: "800px"}}>
 				</div>
 			</div>
 
