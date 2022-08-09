@@ -1,14 +1,14 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Jotform from 'react-jotform';
-
 
 export default function Home() {
   return (
     <div className={styles.site}>
 		<Head>
-			<title>OmniPower Quote</title>
-			<meta name="description" content="OmniPower solar quote estimate" />
+			<title>OmniPower Solar Quote</title>
+			<meta name="description" content="Get your FREE quote with OmniPower" />
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
@@ -39,9 +39,9 @@ export default function Home() {
           rel="noopener noreferrer"
         > */}
           © 2022 OmniPower{' '}
-          {/* <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span> */}
+          <span className={styles.logo}>
+            <Image src="/logo-shape-white.svg" alt="OmniPower Logo" width={30} height={16} />
+          </span>
         {/* </a> */}
       </footer>
     </div>
