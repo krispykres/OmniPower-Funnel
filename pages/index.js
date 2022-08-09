@@ -1,8 +1,28 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Jotform from 'react-jotform';
+import JotFormReact from 'jotform-react';
+import { useState, useEffect } from 'react';
+
 
 export default function Home() {
+	const [formSubmitted, setFormSubmitted] = useState(false);
+
+	useEffect(() => {
+		const head = document.querySelector('head');
+		const script = document.createElement('script');
+		script.setAttribute(
+		  'src',
+		  'https://assets.calendly.com/assets/external/widget.js'
+		);
+		head.appendChild(script);
+	}, []);
+	
+
+	const handleSubmit = () => {
+		setFormSubmitted(true);
+	};
+
   return (
     <div className={styles.site}>
 		<Head>
@@ -23,10 +43,25 @@ export default function Home() {
 
 			</div>
 
-			<div className={styles.funnel}>
-				<Jotform 
+
+			<div className={styles.funnel} style={formSubmitted ? {display: "none"} : {display: "contents"}}>
+				{/* <Jotform 
 					src="https://form.jotform.com/222154636740049"
+				/> */}
+
+				<JotFormReact
+					formURL="https://form.jotform.com/222154636740049"
+					autoResize={true} // should form auto-resize
+					onSubmit={handleSubmit}
 				/>
+			</div>
+
+			<div className={styles.calendly} style={!formSubmitted ? {display: "none"} : {display: "contents"}}>
+				<div 
+					className="calendly-inline-widget" 
+					data-url="https://calendly.com/omnipower/schedule-a-call" 
+					style={{minWidth: "320px", height: "630px"}}>
+				</div>
 			</div>
 
 		</main>
@@ -37,9 +72,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         > */}
-          © 2022 OmniPower{' '}
+          © 2022{' '}
           <span className={styles.logo}>
-			<img src="/logo-shape-white.svg" alt="OmniPower Logo" width={30} height={16}></img>
+			<img src="/logo-footer.svg" alt="OmniPower Logo" width={120} height={20}></img>
           </span>
         {/* </a> */}
       </footer>
