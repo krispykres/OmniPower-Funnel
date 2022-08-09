@@ -35,7 +35,7 @@ export default function Home() {
 			<div className={styles.header}>
 
 				<span className={styles.logoDesktop}>
-					<img src="/logo-desktop.png" alt="OmniPower Logo" width={381} height={66}></img>
+					<img src="/logo-desktop.png" alt="OmniPower Logo" width={300} height={52}></img>
 				</span	>
 				<span className={styles.logoMobile}>
 					<img src="/logo-mobile.png" alt="OmniPower Logo" width={260} height={45}></img>
