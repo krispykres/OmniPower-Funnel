@@ -4,15 +4,16 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-image: url("/solar-background.png");
+  background: url("/solar-background.jpg") no-repeat center center;
   background-color: white;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  /* background-position: center; Center the image */
+  /* background-repeat: no-repeat; Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   background-attachment: fixed;
+  min-height: 100%;
 }
 
 a {

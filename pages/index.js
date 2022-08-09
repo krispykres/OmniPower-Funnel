@@ -55,7 +55,7 @@ export default function Home() {
 				<div 
 					className={`calendly-inline-widget ${styles.calendlyWidget}`} 
 					data-url="https://calendly.com/omnipower/schedule-a-call" 
-					style={{minWidth: "320px", height: "630px"}}>
+					style={{minWidth: "320px", height: "650px"}}>
 				</div>
 			</div>
 
