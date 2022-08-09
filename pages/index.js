@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import Jotform from 'react-jotform';
 import JotFormReact from 'jotform-react';
 import { useState, useEffect } from 'react';
 
@@ -45,10 +44,6 @@ export default function Home() {
 
 
 			<div className={styles.funnel} style={formSubmitted ? {display: "none"} : {display: "contents"}}>
-				{/* <Jotform 
-					src="https://form.jotform.com/222154636740049"
-				/> */}
-
 				<JotFormReact
 					formURL="https://form.jotform.com/222154636740049"
 					autoResize={true} // should form auto-resize

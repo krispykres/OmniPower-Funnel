@@ -20,7 +20,10 @@
         }
 
         .funnel{
-            padding-bottom: 6em;
+            // padding-bottom: 6em;
+            iframe{
+                padding-bottom: 0;
+            }
         }
     }
 
@@ -64,6 +67,12 @@
     
                 .logoMobile{
                     display: contents;
+                }
+            }
+
+            .funnel{
+                iframe{
+                    padding-bottom: 2em;
                 }
             }
         }
