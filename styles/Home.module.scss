@@ -41,8 +41,6 @@
 
         color: #d4d4d4;
 
-        padding-top: 2em;
-
         .logo{
             height: 1em;
             margin-left: 0.5rem;
@@ -57,7 +55,7 @@
             .header{
                 display: flex;
                 justify-content: center;
-                padding: 2em 0 0 0;
+                padding: 2em 0 2em 0;
 
                 .logoDesktop{
                     display: none;
