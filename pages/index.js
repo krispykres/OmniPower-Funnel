@@ -40,7 +40,7 @@ export default function Home() {
         > */}
           © 2022 OmniPower{' '}
           <span className={styles.logo}>
-            <Image src="/logo-shape-white.svg" alt="OmniPower Logo" width={30} height={16} />
+			<img src="/logo-shape-white.svg" alt="OmniPower Logo" width={30} height={16}></img>
           </span>
         {/* </a> */}
       </footer>
