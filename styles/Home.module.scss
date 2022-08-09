@@ -25,6 +25,12 @@
                 padding-bottom: 0;
             }
         }
+
+        .calendly{
+            .calendly-inline-widget{
+                padding-bottom: 6em;
+            }
+        }
     }
 
     .footer{
@@ -72,7 +78,13 @@
 
             .funnel{
                 iframe{
-                    padding-bottom: 2em;
+                    padding-bottom: 6em;
+                }
+            }
+
+            .calendly{
+                .calendly-inline-widget{
+                    padding-bottom: 6em;
                 }
             }
         }
