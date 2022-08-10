@@ -43,13 +43,16 @@ export default function Home() {
 
 			</div>
 
-
 			<div className={styles.funnel} style={formSubmitted ? {display: "none"} : {display: "contents"}}>
 				<JotFormReact
 					formURL="https://form.jotform.com/222154636740049"
 					autoResize={true} // should form auto-resize
 					onSubmit={handleSubmit}
 				/>
+			</div>
+
+			<div className={styles.secure} style={formSubmitted ? {display: "none"} : {display: "flex"}}>
+				<img className={styles.seal} src='/security-seal.png' alt='Security Seal' width={100} height={100}></img>
 			</div>
 
 			<div className={styles.calendly} style={!formSubmitted ? {display: "none"} : {display: "contents"}}>
