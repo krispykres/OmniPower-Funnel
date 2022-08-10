@@ -1,11 +1,10 @@
 // Desktop devices
 .site{
-    position: relative;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 150px 50px;
 
     .wrapper{
-
-        padding-bottom: 6em;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -18,43 +17,35 @@
 
             .logoDesktop{
                 display: contents;
+
+                a{
+                    img{
+                        cursor: pointer;
+                    }
+                }
             }
 
             .logoMobile{
                 display: none;
+
+                a{
+                    img{
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
         .funnel{
-            // padding-bottom: 6em;
+
             iframe{
-                // padding-bottom: 0;
                 height: 750px !important;
             }
         }
 
-        .secure{
-            background-color: rgba(0,0,0,0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 832px;
-            width: 85%;
-            height: 150px;
-            border: solid;
-            border-width: 1px;
-            border-color: #d4d4d4;
-            border-radius: 4px;
-            padding-top: 0;
-
-            .seal{
-
-            }
-        }
-
         .calendly{
+
             .calendlyWidget{
-                // padding-bottom: 6em;
                 overflow: hidden !important;
                 width: 100%;
 
@@ -66,23 +57,30 @@
 
         display: flex;
         flex: 1;
-        padding: 2rem 0;
         border-top: 1px solid #d4d4d4;
         background-color: rgba(0, 0, 0, 0.3);
         justify-content: center;
         align-items: center;
-
-        position: absolute;
-        bottom: 0;
         width: 100%;
-        height: 2.5em;
-
+        height: 50px;
         color: #d4d4d4;
         font-size: 0.8em;
 
         .logo{
             height: 1.5em;
             margin-left: 0.25rem;
+        }
+    }
+
+    .secure{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+
+        .seal{
+
         }
     }
 }
@@ -98,10 +96,22 @@
 
                 .logoDesktop{
                     display: none;
+
+                    a{
+                        img{
+                            cursor: pointer;
+                        }
+                    }
                 }
     
                 .logoMobile{
                     display: contents;
+
+                    a{
+                        img{
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
 
@@ -112,33 +122,22 @@
                 }
             }
 
-            .secure{
-                background-color: rgba(0,0,0,0.3);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                max-width: 832px;
-                width: 100%;
-                height: 150px;
-                border-top: solid;
-                border-bottom: solid;
-                border-right: none;
-                border-left: none;
-                border-width: 1px;
-                border-color: #d4d4d4;
-                border-radius: 0px;
-                margin-top: 2em;
-    
-                .seal{
-    
-                }
-            }
-    
-
             .calendly{
                 .calendlyWidget{
-                    // padding-bottom: 6em;
+
                 }
+            }
+        }
+
+        .secure{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 150px; 
+
+            .seal{
+
             }
         }
     }
