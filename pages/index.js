@@ -26,8 +26,8 @@ export default function Home() {
   return (
     <div className={styles.site}>
 		<Head>
-			<title>OmniPower Solar Quote</title>
-			<meta name="description" content="Get your FREE quote with OmniPower" />
+			<title>Omni Power Solar Quote</title>
+			<meta name="description" content="Get your FREE quote with Omni Power" />
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
@@ -36,12 +36,12 @@ export default function Home() {
 
 				<span className={styles.logoDesktop}>
 					<a href=".">
-						<img src="/logo-desktop.png" alt="OmniPower Logo" width={300} height={52}></img>
+						<img src="/logo-desktop.png" alt="Omni Power Logo" width={300} height={52}></img>
 					</a>
 				</span	>
 				<span className={styles.logoMobile}>
 					<a href=".">
-						<img src="/logo-mobile.png" alt="OmniPower Logo" width={260} height={45}></img>
+						<img src="/logo-mobile.png" alt="Omni Power Logo" width={260} height={45}></img>
 					</a>
 				</span>
 
@@ -77,7 +77,7 @@ export default function Home() {
 			> */}
 				© 2022{' '}
 				<span className={styles.logo}>
-					<img src="/logo-footer.svg" alt="OmniPower Logo" width={120} height={20}></img>
+					<img src="/logo-footer.svg" alt="Omni Power Logo" width={120} height={20}></img>
 				</span>
 		{/* </a> */}
 		</footer>
