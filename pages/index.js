@@ -25,12 +25,6 @@ export default function Home() {
 
   return (
     <div className={styles.site}>
-		<Head>
-			<title>Omni Power Solar Quote</title>
-			<meta name="description" content="Get your FREE quote with Omni Power" />
-			<link rel="icon" href="/favicon.ico" />
-		</Head>
-
 		<main className={styles.wrapper}>
 			<div className={styles.header}>
 
