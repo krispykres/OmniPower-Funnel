@@ -1,26 +1,15 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import JotFormReact from 'jotform-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 export default function Home() {
 	const [formSubmitted, setFormSubmitted] = useState(false);
 
-	useEffect(() => {
-		const head = document.querySelector('head');
-		const script = document.createElement('script');
-		script.setAttribute(
-		  'src',
-		  'https://assets.calendly.com/assets/external/widget.js'
-		);
-		head.appendChild(script);
-	}, []);
-	
-
 	const handleSubmit = () => {
 		setFormSubmitted(true);
 		window.scrollTo(0, 0);
+		window.open('/thank-you', '_self');
 	};
 
   return (
@@ -47,14 +36,6 @@ export default function Home() {
 					autoResize={true} // should form auto-resize
 					onSubmit={handleSubmit}
 				/>
-			</div>
-
-			<div className={styles.calendly} style={!formSubmitted ? {display: "none"} : {display: "contents"}}>
-				<div 
-					className={`calendly-inline-widget ${styles.calendlyWidget}`} 
-					data-url="https://calendly.com/omnipower/schedule-a-call" 
-					style={{minWidth: "320px", height: "800px"}}>
-				</div>
 			</div>
 
 		</main>
