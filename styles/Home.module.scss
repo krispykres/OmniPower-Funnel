@@ -44,6 +44,8 @@
         }
 
         .calendly{
+            width: 100vw;
+            padding: 0;
 
             .calendlyWidget{
                 overflow: hidden !important;
@@ -123,6 +125,9 @@
             }
 
             .calendly{
+
+                padding: 0 1em;
+                
                 .calendlyWidget{
 
                 }

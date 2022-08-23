@@ -1,16 +1,17 @@
 import styles from '../styles/Home.module.scss'
-import JotFormReact from 'jotform-react';
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 export default function Home() {
-	const [formSubmitted, setFormSubmitted] = useState(false);
-
-	const handleSubmit = () => {
-		setFormSubmitted(true);
-		window.scrollTo(0, 0);
-		window.open('/thank-you', '_self');
-	};
+	useEffect(() => {
+		const head = document.querySelector('head');
+		const script = document.createElement('script');
+		script.setAttribute(
+		  'src',
+		  'https://assets.calendly.com/assets/external/widget.js'
+		);
+		head.appendChild(script);
+	}, []);
 
   return (
     <div className={styles.site}>
@@ -29,13 +30,12 @@ export default function Home() {
 				</span>
 
 			</div>
-
-			<div className={styles.funnel} style={formSubmitted ? {display: "none"} : {display: "contents"}}>
-				<JotFormReact
-					formURL="https://form.jotform.com/222154636740049"
-					autoResize={true} // should form auto-resize
-					onSubmit={handleSubmit}
-				/>
+			<div className={styles.calendly}>
+				<div 
+					className={`calendly-inline-widget ${styles.calendlyWidget}`} 
+					data-url="https://calendly.com/omnipower/schedule-a-call" 
+					style={{minWidth: "320px", height: "800px"}}>
+				</div>
 			</div>
 
 		</main>
