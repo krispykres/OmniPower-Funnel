@@ -28,9 +28,12 @@ export default function Document() {
                     fbq('track', 'PageView');
                 `}
             </Script>
-            <noscript><img height="1" width="1" style="display:none"
-                src="https://www.facebook.com/tr?id=704719686821979&ev=PageView&noscript=1"
-            /></noscript>
+            <noscript
+                dangerouslySetInnerHTML={{ __html:
+                    `<img height="1" width="1" style="display:none"
+                    src="https://www.facebook.com/tr?id=704719686821979&ev=PageView&noscript=1"/>`
+                }}
+            ></noscript>
 			<title>Omni Power Solar Quote</title>
 			<meta name="description" content="Get your FREE quote with Omni Power" />
 			<link rel="icon" href="/favicon.ico" />
