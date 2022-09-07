@@ -1,19 +1,16 @@
 import styles from '../styles/Home.module.scss'
-import { useEffect } from 'react';
-import Link from 'next/link';
-
+import JotFormReact from 'jotform-react';
+import { useState } from 'react';
 
 
 export default function Home() {
-	useEffect(() => {
-		const head = document.querySelector('head');
-		const script = document.createElement('script');
-		script.setAttribute(
-		  'src',
-		  'https://assets.calendly.com/assets/external/widget.js'
-		);
-		head.appendChild(script);
-	}, []);
+	const [formSubmitted, setFormSubmitted] = useState(false);
+
+	const handleSubmit = () => {
+		setFormSubmitted(true);
+		window.scrollTo(0, 0);
+		window.open('/thank-you', '_self');
+	};
 
   return (
     <div className={styles.site}>
@@ -21,27 +18,24 @@ export default function Home() {
 			<div className={styles.header}>
 
 				<span className={styles.logoDesktop}>
-					<Link href="/">
-						<a>
-							<img src="/logo-desktop.png" alt="Omni Power Logo" width={300} height={52}></img>
-						</a>
-					</Link>
+					<a href=".">
+						<img src="/logo-desktop.png" alt="Omni Power Logo" width={300} height={52}></img>
+					</a>
 				</span	>
 				<span className={styles.logoMobile}>
-					<Link href="/">
-						<a>
-							<img src="/logo-mobile.png" alt="Omni Power Logo" width={260} height={45}></img>
-						</a>
-					</Link>
+					<a href=".">
+						<img src="/logo-mobile.png" alt="Omni Power Logo" width={260} height={45}></img>
+					</a>
 				</span>
 
 			</div>
-			<div className={styles.calendly}>
-				<div 
-					className={`calendly-inline-widget ${styles.calendlyWidget}`} 
-					data-url="https://calendly.com/omnipower/schedule-a-call" 
-					style={{minWidth: "320px", height: "800px"}}>
-				</div>
+
+			<div className={styles.funnel} style={formSubmitted ? {display: "none"} : {display: "contents"}}>
+				<JotFormReact
+					formURL="https://form.jotform.com/222154636740049"
+					autoResize={true} // should form auto-resize
+					onSubmit={handleSubmit}
+				/>
 			</div>
 
 		</main>
