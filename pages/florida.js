@@ -32,7 +32,7 @@ export default function Home() {
 
 			<div className={styles.funnel} style={formSubmitted ? {display: "none"} : {display: "contents"}}>
 				<JotFormReact
-					formURL="https://form.jotform.com/222154636740049"
+					formURL="https://form.jotform.com/222545509125150"
 					autoResize={true} // should form auto-resize
 					onSubmit={handleSubmit}
 				/>
